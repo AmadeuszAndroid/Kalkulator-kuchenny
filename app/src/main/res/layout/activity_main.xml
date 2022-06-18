@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_calculate_variant"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/choose_variant"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/choose_variant"
+        app:layout_constraintStart_toStartOf="@id/choose_variant"
+        android:checkedButton="@id/ml"
+        android:id="@+id/measure_from"
+        >
+        <RadioButton
+            android:id="@+id/ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ml"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/g"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/measure_from"
+        app:layout_constraintTop_toBottomOf="@id/measure_from"
+        android:text="@string/on"
+        android:id="@+id/on"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/on"
+        app:layout_constraintStart_toStartOf="@id/choose_variant"
+        android:checkedButton="@id/glass"
+        android:id="@+id/measure_to"
+        >
+        <RadioButton
+            android:id="@+id/glass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/glasses"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spoons"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teaspoons"/>
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/measure_to"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/put_value_to_calculate"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_value_to_calculate"
+        android:id="@+id/value_to_calculate"/>
+
+    <Switch
+        android:id="@+id/reverse_calculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/value_to_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/reverse_calculate"/>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/reverse_calculator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/calculate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/calculate"
+        app:layout_constraintEnd_toEndOf="@id/calculate"
+        android:text="@string/result"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
