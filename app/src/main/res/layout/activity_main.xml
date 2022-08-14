@@ -7,13 +7,24 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/choose_variant"
+        app:layout_constraintBottom_toBottomOf="@id/choose_variant"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ic_calculate"
+        android:id="@+id/icon_calculate"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/choose_calculate_variant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/choose_variant"/>
+        android:id="@+id/choose_variant"
+        android:layout_marginStart="32dp"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -71,13 +82,24 @@
 
     </RadioGroup>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/value_to_calculate"
+        app:layout_constraintBottom_toBottomOf="@id/value_to_calculate"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ic_edit"
+        android:id="@+id/icon_edit"/>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/measure_to"
         app:layout_constraintStart_toStartOf="parent"
         android:hint="@string/hint_value_to_calculate"
-        android:id="@+id/value_to_calculate">
+        android:id="@+id/value_to_calculate"
+        android:layout_marginStart="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -86,6 +108,16 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/reverse_calculator"
+        app:layout_constraintBottom_toBottomOf="@id/reverse_calculator"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ic_swap"
+        android:id="@+id/icon_swap"/>
+
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/reverse_calculator"
         android:layout_width="0dp"
@@ -93,7 +125,8 @@
         app:layout_constraintTop_toBottomOf="@id/value_to_calculate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/reverse_calculate"/>
+        android:text="@string/reverse_calculate"
+        android:layout_marginStart="32dp"/>
 
     <Button
         android:id="@+id/calculate"
@@ -102,13 +135,16 @@
         app:layout_constraintTop_toBottomOf="@id/reverse_calculator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/calculate"/>
+        android:text="@string/calculate"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/calculate"
         app:layout_constraintEnd_toEndOf="@id/calculate"
-        android:text="@string/result"/>
+        android:text="@string/result"
+        android:layout_marginTop="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Konwerter jednostek gotowania</string>
-    <string name="choose_calculate_variant">Podaj co chcesz przeliczyć</string>
+    <string name="choose_calculate_variant">Podaj, co chcesz przeliczyć</string>
     <string name="ml">mililitry</string>
     <string name="g">gramy</string>
     <string name="on">na</string>
