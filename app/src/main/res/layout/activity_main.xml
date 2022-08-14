@@ -24,7 +24,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/choose_variant"
-        android:layout_marginStart="32dp"/>
+        android:layout_marginStart="32dp"
+        style="@style/Widget.CookingUnitConverter.TextView"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -53,7 +54,8 @@
         app:layout_constraintStart_toStartOf="@id/measure_from"
         app:layout_constraintTop_toBottomOf="@id/measure_from"
         android:text="@string/on"
-        android:id="@+id/on"/>
+        android:id="@+id/on"
+        style="@style/Widget.CookingUnitConverter.TextView"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -126,7 +128,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/reverse_calculate"
-        android:layout_marginStart="32dp"/>
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"/>
 
     <Button
         android:id="@+id/calculate"
@@ -145,6 +148,7 @@
         app:layout_constraintTop_toBottomOf="@id/calculate"
         app:layout_constraintEnd_toEndOf="@id/calculate"
         android:text="@string/result"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        style="@style/Widget.CookingUnitConverter.TextView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
