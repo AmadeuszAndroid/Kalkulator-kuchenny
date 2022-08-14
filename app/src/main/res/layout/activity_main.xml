@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/g"/>
+
     </RadioGroup>
 
     <TextView
@@ -50,6 +52,7 @@
         android:checkedButton="@id/glass"
         android:id="@+id/measure_to"
         >
+
         <RadioButton
             android:id="@+id/glass"
             android:layout_width="wrap_content"
@@ -65,17 +68,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/teaspoons"/>
+
     </RadioGroup>
 
-    <EditText
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/measure_to"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/put_value_to_calculate"
-        android:inputType="numberDecimal"
         android:hint="@string/hint_value_to_calculate"
-        android:id="@+id/value_to_calculate"/>
+        android:id="@+id/value_to_calculate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Switch
         android:id="@+id/reverse_calculator"
@@ -101,4 +110,5 @@
         app:layout_constraintTop_toBottomOf="@id/calculate"
         app:layout_constraintEnd_toEndOf="@id/calculate"
         android:text="@string/result"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

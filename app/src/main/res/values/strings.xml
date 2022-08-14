@@ -9,7 +9,7 @@
     <string name="teaspoons">łyżeczki</string>
     <string name="put_value_to_calculate">Podaj wartość do przeliczenia</string>
     <string name="reverse_calculate">Czy zastosować odwrotne przeliczanie?</string>
-    <string name="hint_value_to_calculate">Wartość do przeliczenia</string>
+    <string name="hint_value_to_calculate">Podaj wartość</string>
     <string name="calculate">Przelicz</string>
     <string name="result">Wynik</string>
 </resources>
