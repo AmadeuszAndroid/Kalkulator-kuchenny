@@ -1,154 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/choose_variant"
-        app:layout_constraintBottom_toBottomOf="@id/choose_variant"
-        android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_calculate"
-        android:id="@+id/icon_calculate"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/choose_calculate_variant"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/choose_variant"
-        android:layout_marginStart="32dp"
-        style="@style/Widget.CookingUnitConverter.TextView"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/choose_variant"
-        app:layout_constraintStart_toStartOf="@id/choose_variant"
-        android:checkedButton="@id/ml"
-        android:id="@+id/measure_from"
-        >
-        <RadioButton
-            android:id="@+id/ml"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ml"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/choose_variant"
+            app:layout_constraintBottom_toBottomOf="@id/choose_variant"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_calculate"
+            android:id="@+id/icon_calculate"/>
 
-        <RadioButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/g"/>
+            android:text="@string/choose_calculate_variant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/choose_variant"
+            android:layout_marginStart="32dp"
+            style="@style/Widget.CookingUnitConverter.TextView"/>
 
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/measure_from"
-        app:layout_constraintTop_toBottomOf="@id/measure_from"
-        android:text="@string/on"
-        android:id="@+id/on"
-        style="@style/Widget.CookingUnitConverter.TextView"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/on"
-        app:layout_constraintStart_toStartOf="@id/choose_variant"
-        android:checkedButton="@id/glass"
-        android:id="@+id/measure_to"
-        >
-
-        <RadioButton
-            android:id="@+id/glass"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/glasses"/>
+            app:layout_constraintTop_toBottomOf="@id/choose_variant"
+            app:layout_constraintStart_toStartOf="@id/choose_variant"
+            android:checkedButton="@id/ml"
+            android:id="@+id/measure_from"
+            >
 
-        <RadioButton
+            <RadioButton
+                android:id="@+id/ml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ml"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g"/>
+
+        </RadioGroup>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/spoons"/>
+            app:layout_constraintStart_toStartOf="@id/measure_from"
+            app:layout_constraintTop_toBottomOf="@id/measure_from"
+            android:text="@string/on"
+            android:id="@+id/on"
+            style="@style/Widget.CookingUnitConverter.TextView"/>
 
-        <RadioButton
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/teaspoons"/>
+            app:layout_constraintTop_toBottomOf="@id/on"
+            app:layout_constraintStart_toStartOf="@id/choose_variant"
+            android:checkedButton="@id/glass"
+            android:id="@+id/measure_to"
+            >
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/glass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/glasses"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/value_to_calculate"
-        app:layout_constraintBottom_toBottomOf="@id/value_to_calculate"
-        android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_edit"
-        android:id="@+id/icon_edit"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spoons"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/measure_to"
-        app:layout_constraintStart_toStartOf="parent"
-        android:hint="@string/hint_value_to_calculate"
-        android:id="@+id/value_to_calculate"
-        android:layout_marginStart="32dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teaspoons"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/value_to_calculate"
+            app:layout_constraintBottom_toBottomOf="@id/value_to_calculate"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_edit"
+            android:id="@+id/icon_edit"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/measure_to"
+            app:layout_constraintStart_toStartOf="parent"
+            android:hint="@string/hint_value_to_calculate"
+            android:id="@+id/value_to_calculate"
+            android:layout_marginStart="32dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/reverse_calculator"
-        app:layout_constraintBottom_toBottomOf="@id/reverse_calculator"
-        android:importantForAccessibility="no"
-        app:srcCompat="@drawable/ic_swap"
-        android:id="@+id/icon_swap"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/reverse_calculator"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/value_to_calculate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/reverse_calculate"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/reverse_calculator"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/calculate"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/reverse_calculator"
+            app:layout_constraintBottom_toBottomOf="@id/reverse_calculator"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_swap"
+            android:id="@+id/icon_swap"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/calculate"
-        app:layout_constraintEnd_toEndOf="@id/calculate"
-        android:text="@string/result"
-        android:layout_marginTop="8dp"
-        style="@style/Widget.CookingUnitConverter.TextView"/>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/reverse_calculator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/value_to_calculate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/reverse_calculate"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/reverse_calculator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/calculate"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            app:layout_constraintEnd_toEndOf="@id/calculate"
+            android:text="@string/result"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.CookingUnitConverter.TextView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
