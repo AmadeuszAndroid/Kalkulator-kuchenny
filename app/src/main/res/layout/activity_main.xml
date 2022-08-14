@@ -86,7 +86,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/reverse_calculator"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
