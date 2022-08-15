@@ -38,8 +38,7 @@
             app:layout_constraintTop_toBottomOf="@id/choose_variant"
             app:layout_constraintStart_toStartOf="@id/choose_variant"
             android:checkedButton="@id/ml"
-            android:id="@+id/measure_from"
-            >
+            android:id="@+id/research_units">
 
             <RadioButton
                 android:id="@+id/ml"
@@ -50,6 +49,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/g"
                 android:text="@string/g"/>
 
         </RadioGroup>
@@ -57,8 +57,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/measure_from"
-            app:layout_constraintTop_toBottomOf="@id/measure_from"
+            app:layout_constraintStart_toStartOf="@id/research_units"
+            app:layout_constraintTop_toBottomOf="@id/research_units"
             android:text="@string/on"
             android:id="@+id/on"
             style="@style/Widget.CookingUnitConverter.TextView"/>
@@ -68,22 +68,23 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/on"
             app:layout_constraintStart_toStartOf="@id/choose_variant"
-            android:checkedButton="@id/glass"
-            android:id="@+id/measure_to"
-            >
+            android:checkedButton="@id/glasses"
+            android:id="@+id/tableware">
 
             <RadioButton
-                android:id="@+id/glass"
+                android:id="@+id/glasses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/glasses"/>
 
             <RadioButton
+                android:id="@+id/spoons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/spoons"/>
 
             <RadioButton
+                android:id="@+id/teaspoons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/teaspoons"/>
@@ -94,8 +95,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/value_to_calculate"
-            app:layout_constraintBottom_toBottomOf="@id/value_to_calculate"
+            app:layout_constraintTop_toTopOf="@id/value_to_convert_border"
+            app:layout_constraintBottom_toBottomOf="@id/value_to_convert_border"
             android:importantForAccessibility="no"
             app:srcCompat="@drawable/ic_edit"
             android:id="@+id/icon_edit"/>
@@ -103,16 +104,17 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/measure_to"
+            app:layout_constraintTop_toBottomOf="@id/tableware"
             app:layout_constraintStart_toStartOf="parent"
             android:hint="@string/hint_value_to_calculate"
-            android:id="@+id/value_to_calculate"
+            android:id="@+id/value_to_convert_border"
             android:layout_marginStart="32dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:id="@+id/value_to_convert"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,7 +132,7 @@
             android:id="@+id/reverse_calculator"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/value_to_calculate"
+            app:layout_constraintTop_toBottomOf="@id/value_to_convert_border"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/reverse_calculate"
@@ -138,7 +140,7 @@
             android:layout_marginTop="8dp"/>
 
         <Button
-            android:id="@+id/calculate"
+            android:id="@+id/convert"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/reverse_calculator"
@@ -151,10 +153,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/calculate"
-            app:layout_constraintEnd_toEndOf="@id/calculate"
-            android:text="@string/result"
+            app:layout_constraintTop_toBottomOf="@id/convert"
+            app:layout_constraintEnd_toEndOf="@id/convert"
             android:layout_marginTop="8dp"
+            android:id="@+id/result"
             style="@style/Widget.CookingUnitConverter.TextView"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
