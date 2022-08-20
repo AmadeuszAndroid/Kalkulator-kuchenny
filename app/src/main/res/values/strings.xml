@@ -11,5 +11,5 @@
     <string name="reverse_calculate">Czy zastosować odwrotne przeliczanie?</string>
     <string name="hint_value_to_calculate">Podaj wartość</string>
     <string name="calculate">Przelicz</string>
-    <string name="result">Wynik</string>
+    <string name="result">Wynik: %s</string>
 </resources>

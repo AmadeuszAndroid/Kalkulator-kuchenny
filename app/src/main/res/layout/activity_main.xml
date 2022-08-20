@@ -157,7 +157,8 @@
             app:layout_constraintEnd_toEndOf="@id/convert"
             android:layout_marginTop="8dp"
             android:id="@+id/result"
-            style="@style/Widget.CookingUnitConverter.TextView"/>
+            style="@style/Widget.CookingUnitConverter.TextView"
+            tools:text="Wynik: 250"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

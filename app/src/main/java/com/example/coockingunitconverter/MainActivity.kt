@@ -20,19 +20,16 @@ class MainActivity : AppCompatActivity() {
         val valueToConvert = stringInTextFiled.toDouble()
         val reverseConvert = binding.reverseCalculator.isChecked
 
-        val selectedTablewareId = binding.tableware.checkedRadioButtonId
-
-        val result: Double
-        val multiplier = when (selectedTablewareId) {
+        val multiplier = when (binding.tableware.checkedRadioButtonId) {
             R.id.glasses -> 250
             R.id.spoons -> 15
             else -> 5
         }
-        result = if (reverseConvert) {
-            valueToConvert * multiplier
+
+        binding.result.text = getString(R.string.result, if (reverseConvert) {
+            (valueToConvert * multiplier).toInt().toString()
         } else {
-            valueToConvert / multiplier
-        }
-        binding.result.text = result.toString()
+            String.format("%.2f", valueToConvert / multiplier)
+        })
     }
 }
