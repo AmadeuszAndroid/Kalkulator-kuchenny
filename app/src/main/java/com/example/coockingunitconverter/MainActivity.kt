@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun convertMeasures() {
         val stringInTextFiled = binding.valueToConvert.text.toString()
-        val valueToConvert = stringInTextFiled.toDouble()
+        val valueToConvert = stringInTextFiled.toDoubleOrNull() ?: return
         val reverseConvert = binding.reverseCalculator.isChecked
 
         val multiplier = when (binding.tableware.checkedRadioButtonId) {
